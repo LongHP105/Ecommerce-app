@@ -1,8 +1,13 @@
 import express from "express";
+import data from "./data.js";
 const app = express();
+const port = process.env.PORT || 5000;
+app.get("/api/products" ,(req,res) => {
+    res.send(data.products)
+})
 app.get("/", (req, res) => {
     res.send("Hello World")
 });
-app.listen(5000, ()=>{
-    console.log('Server at https://localhost:5000')
+app.listen(port, ()=>{
+    console.log(`Server at http://localhost:${port}`)
 })
