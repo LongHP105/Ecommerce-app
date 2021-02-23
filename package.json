@@ -7,9 +7,6 @@
   "scripts": {
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
-  
-  
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LongHP105/Ecommerce-app.git"
@@ -24,6 +21,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "nodemon": "^2.0.7"
   }
 }
