@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Product from "../components/Product";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -14,6 +14,7 @@ const HomeScreen = () => {
     dispatch(listProducts());
   }, [dispatch]);
   return (
+    
     <div>
       {loading ? (
         <LoadingBox></LoadingBox>
