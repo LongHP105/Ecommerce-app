@@ -15,8 +15,8 @@ const ProductScreen = (props) => {
   useEffect(() => {
     dispatch(detailProducts(productId));
   }, [dispatch, productId]);
-  const addToCartHandler = () =>{
-    props.history.push(`/cart/${productId}?qty=${qty}`, product);
+   const addToCartHandler = () =>{
+     props.history.push(`/cart/${productId}?qty=${qty}`);
   }
   return (
     <div>
