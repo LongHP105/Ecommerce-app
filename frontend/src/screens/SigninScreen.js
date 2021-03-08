@@ -11,7 +11,6 @@ const SigninScreen = (props) => {
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";
-    console.log(redirect)
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo, loading, error } = userSignin;
   const dispatch = useDispatch();
@@ -21,11 +20,11 @@ const SigninScreen = (props) => {
     //TODO: sigin Action
     dispatch(signin(email, password));
   };
-  useEffect(()=>{
-      if(userInfo) {
-          props.history.push(redirect)
-      }
-  }, [userInfo, props.history, redirect])
+  useEffect(() => {
+    if (userInfo) {
+      props.history.push(redirect);
+    }
+  }, [userInfo, props.history, redirect]);
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
@@ -33,7 +32,7 @@ const SigninScreen = (props) => {
           <h1>Sign In</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
-  {error && <MessageBox variant="danger">{error}</MessageBox>}
+        {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
           <label htmlFor="email"> Email</label>
           <input
@@ -62,7 +61,10 @@ const SigninScreen = (props) => {
         <div>
           <label />
           <div>
-            New Customer? <Link to={`/register?redirect=${redirect}`}>Create your account?</Link>
+            New Customer?{" "}
+            <Link to={`/register?redirect=${redirect}`}>
+              Create your account?
+            </Link>
           </div>
         </div>
       </form>
