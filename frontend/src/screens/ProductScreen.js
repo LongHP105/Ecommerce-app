@@ -3,7 +3,7 @@ import Rating from "../components/Rating";
 import { useSelector, useDispatch } from "react-redux";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
-import { detailProducts } from "../actions/productActions";
+import { detailProducts } from "../redux/actions/productActions";
 
 const ProductScreen = (props) => {
   const dispatch = useDispatch();

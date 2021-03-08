@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { createOrder } from "../actions/orderAction";
-import { ORDER_CREATE_RESET } from "../constants/orderConstants";
+import { createOrder } from "../redux/actions/orderAction";
+import { ORDER_CREATE_RESET } from "../redux/constants/orderConstants";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 
